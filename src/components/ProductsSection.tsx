@@ -148,8 +148,7 @@ export default function ProductsSection() {
                 overflow: 'hidden',
                 borderRadius: '8px',
                 backgroundColor: '#f5f5f5',
-                cursor: 'pointer',
-                group: 'true' // Using a generic group for hover if we had tailwind, but we'll use inline styles
+                cursor: 'pointer'
               }}
               className="product-card"
             >
