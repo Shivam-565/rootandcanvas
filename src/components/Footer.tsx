@@ -35,7 +35,7 @@ export default function Footer() {
             letterSpacing: '0.15em',
             opacity: 0.6
           }}>
-            Preserving what matters. Creating what's next.
+            Preserving what matters. Creating what&apos;s next.
           </p>
         </div>
 

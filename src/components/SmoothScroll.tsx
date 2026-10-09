@@ -18,6 +18,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     requestAnimationFrame(raf);
 
     // Provide to window so Webflow can access it if needed
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).lenis = lenis;
 
     return () => {

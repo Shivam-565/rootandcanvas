@@ -1,13 +1,12 @@
 'use client';
 import React, { useEffect } from 'react';
-import parse from 'html-react-parser';
 import { mainContentHtml } from './mainHtml';
-import gsap from 'gsap';
 
 export default function MainContent() {
   useEffect(() => {
     // Force Webflow to re-initialize since Next.js loads scripts asynchronously
     const timer = setTimeout(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const win = window as any;
       if (win.Webflow) {
         win.Webflow.destroy();

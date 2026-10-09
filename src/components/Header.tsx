@@ -61,7 +61,7 @@ export default function Header() {
       </div>
       
       <div className="header_balance is-middle" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <a href="/" aria-current="page" className="w-inline-block w--current" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+        <Link href="/" aria-current="page" className="w-inline-block w--current" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
           <h1 style={{ 
             fontFamily: 'var(--font-prata)', 
             fontSize: '2rem', 
@@ -80,9 +80,9 @@ export default function Header() {
             margin: '0.5rem 0 0 0',
             opacity: 0.8
           }}>
-            Preserving what matters. Creating what's next.
+            Preserving what matters. Creating what&apos;s next.
           </p>
-        </a>
+        </Link>
       </div>
 
       <div className="header_balance is-right">
