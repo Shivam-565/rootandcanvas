@@ -62,9 +62,8 @@ export default function Header() {
       
       <div className="header_balance is-middle" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <Link href="/" aria-current="page" className="w-inline-block w--current" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
-          <h1 style={{ 
+          <h1 className="header-logo-title" style={{ 
             fontFamily: 'var(--font-prata)', 
-            fontSize: '2rem', 
             letterSpacing: '0.15em', 
             textTransform: 'uppercase',
             margin: 0,
@@ -72,9 +71,8 @@ export default function Header() {
           }}>
             Root and Canvas
           </h1>
-          <p style={{ 
+          <p className="header-logo-subtitle" style={{ 
             fontFamily: 'var(--font-bricolage)', 
-            fontSize: '0.75rem', 
             textTransform: 'none',
             letterSpacing: '0.02em',
             margin: '0.5rem 0 0 0',
@@ -91,6 +89,23 @@ export default function Header() {
         </button>
       </div>
       <div className="header_overlay-mobile"></div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        .header-logo-title {
+          font-size: 2rem;
+        }
+        .header-logo-subtitle {
+          font-size: 0.75rem;
+        }
+        @media (max-width: 768px) {
+          .header-logo-title {
+            font-size: 1.25rem;
+          }
+          .header-logo-subtitle {
+            display: none;
+          }
+        }
+      `}} />
     </header>
   );
 }
