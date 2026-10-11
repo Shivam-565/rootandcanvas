@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
+
+const easeCustom = [0.16, 1, 0.3, 1] as const;
 
 export default function Footer() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,20 +21,36 @@ export default function Footer() {
     <>
       <footer>
         <div className="wrap">
-          <div className="footer-grid">
+          <motion.div
+            className="footer-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.8, ease: easeCustom }}
+          >
             <div className="footer-about">
               <Link
                 className="brand footer-logo"
                 href="#home"
                 aria-label="Root and Canvas home"
               >
-                <Image
-                  src="/images/footer-logo.jpg"
-                  alt="Root & Canvas arched landscape and roots icon"
-                  width={125}
-                  height={125}
-                  style={{ width: "auto", height: "auto", maxHeight: "125px", objectFit: "contain" }}
-                />
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Image
+                    src="/images/footer-logo.jpg"
+                    alt="Root & Canvas arched landscape and roots icon"
+                    width={125}
+                    height={125}
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                      maxHeight: "125px",
+                      objectFit: "contain",
+                    }}
+                  />
+                </motion.div>
               </Link>
               <p>Preserving what matters and creating what’s next.</p>
             </div>
@@ -55,30 +74,36 @@ export default function Footer() {
             <div className="footer-col">
               <h4>Stay connected</h4>
               <div className="socials">
-                <a
+                <motion.a
                   href="https://www.instagram.com/rootandcanvas/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   IG
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://www.pinterest.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Pinterest"
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   P
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   in
-                </a>
+                </motion.a>
               </div>
 
               <h4 style={{ marginTop: "1.4rem" }}>The essentials</h4>
@@ -89,7 +114,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </div>
-          </div>
+          </motion.div>
 
           <div className="legal">
             <span>© 2026 Root & Canvas. All rights reserved.</span>
@@ -98,62 +123,74 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Accessible Policy Modal */}
-      {modalOpen && (
-        <div
-          className="modal-backdrop"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="modal-title"
-          onClick={() => setModalOpen(false)}
-        >
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
+      {/* Accessible Policy Modal with AnimatePresence */}
+      <AnimatePresence>
+        {modalOpen && (
+          <motion.div
+            className="modal-backdrop"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            onClick={() => setModalOpen(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.22 }}
           >
-            <div className="modal-header">
-              <h3 id="modal-title">{modalTitle}</h3>
-              <button
-                type="button"
-                className="modal-close-btn"
-                onClick={() => setModalOpen(false)}
-                aria-label="Close dialog"
-              >
-                ×
-              </button>
-            </div>
-            <div className="modal-body">
-              <p>
-                At Root & Canvas, we believe in deep respect for your personal
-                space and privacy.
-              </p>
-              <p>
-                We do not sell, rent, or trade your personal information. Any email
-                addresses collected through our circle signup are solely utilized to
-                share thoughtful updates, archival stories, and early access to our
-                curated resources.
-              </p>
-              <p>
-                If you ever wish to opt out, you may do so anytime with a single
-                click or by emailing us at{" "}
-                <a href="mailto:teamrootandcanvas@gmail.com">
-                  teamrootandcanvas@gmail.com
-                </a>
-                .
-              </p>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn primary"
-                onClick={() => setModalOpen(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+            <motion.div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.94, y: 18 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 14 }}
+              transition={{ duration: 0.26, ease: easeCustom }}
+            >
+              <div className="modal-header">
+                <h3 id="modal-title">{modalTitle}</h3>
+                <button
+                  type="button"
+                  className="modal-close-btn"
+                  onClick={() => setModalOpen(false)}
+                  aria-label="Close dialog"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="modal-body">
+                <p>
+                  At Root & Canvas, we believe in deep respect for your personal
+                  space and privacy.
+                </p>
+                <p>
+                  We do not sell, rent, or trade your personal information. Any email
+                  addresses collected through our circle signup are solely utilized to
+                  share thoughtful updates, archival stories, and early access to our
+                  curated resources.
+                </p>
+                <p>
+                  If you ever wish to opt out, you may do so anytime with a single
+                  click or by emailing us at{" "}
+                  <a href="mailto:teamrootandcanvas@gmail.com">
+                    teamrootandcanvas@gmail.com
+                  </a>
+                  .
+                </p>
+              </div>
+              <div className="modal-footer">
+                <motion.button
+                  type="button"
+                  className="btn primary"
+                  onClick={() => setModalOpen(false)}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Close
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

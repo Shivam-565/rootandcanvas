@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
+const easeCustom = [0.16, 1, 0.3, 1] as const;
 
 export default function NewsletterBand() {
   const [email, setEmail] = useState("");
@@ -29,7 +32,12 @@ export default function NewsletterBand() {
   return (
     <section className="cta-band" id="community">
       <div className="wrap inner">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8, ease: easeCustom }}
+        >
           <span className="eyebrow" style={{ color: "var(--peach)" }}>
             Join the Circle
           </span>
@@ -38,9 +46,15 @@ export default function NewsletterBand() {
             Stories of forgotten culinary heritage, creative prompts, and
             mindful notes on living with purpose. No noise, just warmth.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="signup">
+        <motion.div
+          className="signup"
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8, delay: 0.18, ease: easeCustom }}
+        >
           <h3>Stay in touch</h3>
           <p>Be the first to explore seasonal offerings and thoughtful journals.</p>
           <form id="signupForm" onSubmit={handleSubmit} noValidate>
@@ -52,19 +66,34 @@ export default function NewsletterBand() {
               aria-label="Your email address"
               required
             />
-            <button type="submit" disabled={isSubmitting}>
+            <motion.button
+              type="submit"
+              disabled={isSubmitting}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
               {isSubmitting ? "Joining..." : "Subscribe"}
-            </button>
+            </motion.button>
           </form>
-          <div
-            id="formMessage"
-            className={`form-message ${isSuccess ? "form-success" : ""}`}
-            role="status"
-            aria-live="polite"
-          >
-            {message}
-          </div>
-        </div>
+
+          <AnimatePresence mode="wait">
+            {message && (
+              <motion.div
+                key={message}
+                id="formMessage"
+                className={`form-message ${isSuccess ? "form-success" : ""}`}
+                role="status"
+                aria-live="polite"
+                initial={{ opacity: 0, y: 8, height: 0 }}
+                animate={{ opacity: 1, y: 0, height: "auto" }}
+                exit={{ opacity: 0, y: -8, height: 0 }}
+                transition={{ duration: 0.3, ease: easeCustom }}
+              >
+                {message}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

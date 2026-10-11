@@ -1016,16 +1016,6 @@ footer {
   display: grid;
   place-items: center;
   padding: 1.5rem;
-  animation: fadeIn 0.2s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .modal-content {
@@ -1037,18 +1027,6 @@ footer {
   padding: 2rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   position: relative;
-  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(16px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .modal-header {

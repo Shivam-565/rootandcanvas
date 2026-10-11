@@ -1,12 +1,23 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
+
+const easeCustom = [0.16, 1, 0.3, 1] as const;
 
 export default function Hero() {
   return (
     <section className="hero-section" id="home">
-      {/* Background artwork stretched across the entire section */}
-      <div className="hero-art-backdrop" style={{ position: "absolute", inset: 0 }}>
+      {/* Background artwork stretched across the entire section with gentle scale settle */}
+      <motion.div
+        className="hero-art-backdrop"
+        style={{ position: "absolute", inset: 0 }}
+        initial={{ scale: 1.05, opacity: 0.8 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, ease: easeCustom }}
+      >
         <Image
           src="/images/hero-art.jpg"
           alt="Thoughtfully arranged food and ingredients on a warm kitchen table"
@@ -18,34 +29,75 @@ export default function Hero() {
         />
         {/* Smooth gradient fade overlay merging the left text into the image */}
         <div className="hero-fade-overlay" aria-hidden="true" />
-      </div>
+      </motion.div>
 
-      {/* Hero content aligned in container */}
+      {/* Hero content with choreographed entrance */}
       <div className="wrap hero-content">
         <div className="hero-copy">
-          <div className="hero-tags">Heritage · Creation · Learning</div>
-          <h1>
+          <motion.div
+            className="hero-tags"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: easeCustom }}
+          >
+            Heritage · Creation · Learning
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.28, ease: easeCustom }}
+          >
             Preserving what matters.
             <br />
             Creating what’s next.
-          </h1>
-          <p>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.42, ease: easeCustom }}
+          >
             We often inherit beautiful things without documenting them, experience
             things without pausing to understand them, and create things without
             thinking about what they might mean years from now.
-          </p>
-          <p>
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.54, ease: easeCustom }}
+          >
             Root and Canvas sits somewhere in between what we inherit and what we
             create.
-          </p>
-          <div className="hero-buttons">
-            <Link href="#offerings" className="btn primary">
-              Explore Offerings
-            </Link>
-            <Link href="#story" className="btn secondary">
-              Read Our Story
-            </Link>
-          </div>
+          </motion.p>
+
+          <motion.div
+            className="hero-buttons"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.68, ease: easeCustom }}
+          >
+            <motion.div
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Link href="#offerings" className="btn primary">
+                Explore Offerings
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -3, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Link href="#story" className="btn secondary">
+                Read Our Story
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
