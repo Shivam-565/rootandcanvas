@@ -62,6 +62,17 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Root & Canvas",
+  url: "https://rootandcanvas.com",
+  sameAs: [
+    "https://www.instagram.com/rootandcanvas/",
+    "https://www.linkedin.com/company/root-and-canvas",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,7 +80,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${prata.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

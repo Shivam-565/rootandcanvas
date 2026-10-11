@@ -15,7 +15,7 @@ export default function Navbar() {
       const isScrolled = window.scrollY > 30;
       setScrolled(isScrolled);
 
-      const sections = ["home", "story", "offerings", "food", "art", "awareness", "difference", "founder", "community"];
+      const sections = ["home", "story", "offerings", "food", "art", "awareness", "difference", "founder"];
       const scrollPos = window.scrollY + 180;
 
       for (const sectionId of sections) {
@@ -149,20 +149,20 @@ export default function Navbar() {
                   Our Story
                 </Link>
                 <Link href="#food" onClick={closeMenu}>
-                  Root (Food)
+                  Root
                 </Link>
                 <Link href="#art" onClick={closeMenu}>
-                  Canvas (Art)
+                  Canvas
                 </Link>
                 <Link href="#awareness" onClick={closeMenu}>
-                  Aware (Awareness)
+                  Aware
                 </Link>
                 <Link
                   href="#offerings"
                   className="mobile-explore-btn"
                   onClick={closeMenu}
                 >
-                  Explore Offerings
+                  Explore
                 </Link>
               </div>
             </motion.div>

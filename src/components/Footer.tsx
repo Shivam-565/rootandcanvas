@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import PrivacyPolicyContent from "./PrivacyPolicyContent";
 
 const easeCustom = [0.16, 1, 0.3, 1] as const;
 
@@ -95,10 +96,10 @@ export default function Footer() {
                   P
                 </motion.a>
                 <motion.a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/root-and-canvas"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="LinkedIn"
+                  aria-label="Root and Canvas on LinkedIn"
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -107,12 +108,12 @@ export default function Footer() {
               </div>
 
               <h4 style={{ marginTop: "1.4rem" }}>The essentials</h4>
-              <a
-                href="#privacy"
+              <Link
+                href="/privacy"
                 onClick={(e) => handlePolicyClick(e, "Privacy Policy")}
               >
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -146,7 +147,10 @@ export default function Footer() {
               transition={{ duration: 0.26, ease: easeCustom }}
             >
               <div className="modal-header">
-                <h3 id="modal-title">{modalTitle}</h3>
+                <div>
+                  <h3 id="modal-title">{modalTitle}</h3>
+                  <span className="modal-subtitle">Effective: 11 October 2026 • Ranchi, India</span>
+                </div>
                 <button
                   type="button"
                   className="modal-close-btn"
@@ -157,26 +161,16 @@ export default function Footer() {
                 </button>
               </div>
               <div className="modal-body">
-                <p>
-                  At Root & Canvas, we believe in deep respect for your personal
-                  space and privacy.
-                </p>
-                <p>
-                  We do not sell, rent, or trade your personal information. Any email
-                  addresses collected through our circle signup are solely utilized to
-                  share thoughtful updates, archival stories, and early access to our
-                  curated resources.
-                </p>
-                <p>
-                  If you ever wish to opt out, you may do so anytime with a single
-                  click or by emailing us at{" "}
-                  <a href="mailto:teamrootandcanvas@gmail.com">
-                    teamrootandcanvas@gmail.com
-                  </a>
-                  .
-                </p>
+                <PrivacyPolicyContent isModal={true} />
               </div>
               <div className="modal-footer">
+                <Link
+                  href="/privacy"
+                  className="modal-fullpage-link"
+                  onClick={() => setModalOpen(false)}
+                >
+                  Open Dedicated Page ↗
+                </Link>
                 <motion.button
                   type="button"
                   className="btn primary"

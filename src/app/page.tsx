@@ -5,7 +5,6 @@ import ProblemSection from "@/components/ProblemSection";
 import OfferingsSection from "@/components/OfferingsSection";
 import DifferenceSection from "@/components/DifferenceSection";
 import FounderSection from "@/components/FounderSection";
-import NewsletterBand from "@/components/NewsletterBand";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
         <OfferingsSection />
         <DifferenceSection />
         <FounderSection />
-        <NewsletterBand />
       </main>
       <Footer />
     </>

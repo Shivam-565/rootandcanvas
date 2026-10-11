@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
 
 const easeCustom = [0.16, 1, 0.3, 1] as const;
@@ -71,33 +70,6 @@ export default function Hero() {
             Root and Canvas sits somewhere in between what we inherit and what we
             create.
           </motion.p>
-
-          <motion.div
-            className="hero-buttons"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.68, ease: easeCustom }}
-          >
-            <motion.div
-              whileHover={{ y: -3, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href="#offerings" className="btn primary">
-                Explore Offerings
-              </Link>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -3, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href="#story" className="btn secondary">
-                Read Our Story
-              </Link>
-            </motion.div>
-          </motion.div>
         </div>
       </div>
     </section>

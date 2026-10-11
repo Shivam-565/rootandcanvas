@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion } from "motion/react";
 
 const easeCustom = [0.16, 1, 0.3, 1] as const;
@@ -10,13 +9,10 @@ const pillarsData = [
   {
     id: "food",
     classSuffix: "food",
-    eyebrow: "ROOT",
-    title: "Food",
+    title: "Root",
     subtitle: "The comfort of belonging.",
     desc: "Some recipes are more than instructions. They carry memories, family histories, places and people we never want to forget.",
     note: "Think family recipes, culinary stories, food-inspired resources and meaningful experiences around food.",
-    btnText: "Discover Food",
-    btnClass: "btn-food",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -39,13 +35,10 @@ const pillarsData = [
   {
     id: "art",
     classSuffix: "art",
-    eyebrow: "CANVAS",
-    title: "Art",
+    title: "Canvas",
     subtitle: "The freedom to create.",
     desc: "Not everything needs to be productive. Some things simply need to bring us joy.",
     note: "Find inspiration, express yourself and make room for the things you love.",
-    btnText: "Explore Art & Creativity",
-    btnClass: "btn-art",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -68,13 +61,10 @@ const pillarsData = [
   {
     id: "awareness",
     classSuffix: "aware",
-    eyebrow: "AWARE",
-    title: "Awareness",
+    title: "Aware",
     subtitle: "The joy of understanding.",
     desc: "A little knowledge can change how we experience an ordinary day.",
     note: "Discover thoughtful resources that help you learn, reflect and live with greater awareness.",
-    btnText: "Explore Awareness",
-    btnClass: "btn-aware",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -159,24 +149,10 @@ export default function OfferingsSection() {
                 </motion.div>
               </div>
 
-              <span className="eyebrow pillar-eyebrow">{item.eyebrow}</span>
               <h3 className="pillar-title">{item.title}</h3>
               <h4 className="pillar-subtitle">{item.subtitle}</h4>
               <p className="pillar-desc">{item.desc}</p>
               <p className="pillar-note">{item.note}</p>
-
-              <motion.div
-                style={{ marginTop: "auto" }}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <Link
-                  href="#community"
-                  className={`pillar-btn ${item.btnClass}`}
-                >
-                  {item.btnText}
-                </Link>
-              </motion.div>
             </motion.article>
           ))}
         </div>

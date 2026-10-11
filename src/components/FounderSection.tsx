@@ -18,7 +18,7 @@ export default function FounderSection() {
           transition={{ duration: 0.9, ease: easeCustom }}
         >
           <Image
-            src="/images/muskan-priya-founder.jpg"
+            src="/images/muskan-priya-founder.jpeg"
             alt="Muskan Priya, Founder of Root & Canvas"
             width={600}
             height={700}
