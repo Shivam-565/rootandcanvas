@@ -46,7 +46,13 @@ export const metadata: Metadata = {
       "Root & Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
   },
 };
 
