@@ -41,7 +41,7 @@ export default function DifferenceSection() {
           <span className="eyebrow">What makes Root and Canvas different?</span>
           <h2>Not just things to own. Things to carry with you.</h2>
           <p>
-            Because growing forward doesn&apos;t have to mean leaving everything
+            Because moving forward doesn&apos;t have to mean leaving everything
             behind.
           </p>
         </motion.div>

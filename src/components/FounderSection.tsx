@@ -68,7 +68,6 @@ export default function FounderSection() {
             With warmth and sunshine,
             <br />
             Muskan Priya
-            <small>Founder, Root & Canvas</small>
           </motion.p>
         </motion.div>
       </div>

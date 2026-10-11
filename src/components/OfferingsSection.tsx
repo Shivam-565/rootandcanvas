@@ -11,8 +11,8 @@ const pillarsData = [
     classSuffix: "food",
     title: "Root",
     subtitle: "The comfort of belonging.",
-    desc: "Some recipes are more than instructions. They carry memories, family histories, places and people we never want to forget.",
-    note: "Think family recipes, culinary stories, food-inspired resources and meaningful experiences around food.",
+    desc: "Recipes are more than instructions. They carry memories, family histories, places and people we never want to forget.",
+    note: "Explore food and story archival, personalised resources and meaningful experiences.",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -38,7 +38,7 @@ const pillarsData = [
     title: "Canvas",
     subtitle: "The freedom to create.",
     desc: "Not everything needs to be productive. Some things simply need to bring us joy.",
-    note: "Find inspiration, express yourself and make room for the things you love.",
+    note: "From books and writing to painting, photography and reading, make room for the things you love.",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -64,7 +64,7 @@ const pillarsData = [
     title: "Aware",
     subtitle: "The joy of understanding.",
     desc: "A little knowledge can change how we experience an ordinary day.",
-    note: "Discover thoughtful resources that help you learn, reflect and live with greater awareness.",
+    note: "Discover approachable resources for learning, reflection, gratitude, curiosity and more conscious habits.",
     icon: (
       <svg
         viewBox="0 0 32 32"
