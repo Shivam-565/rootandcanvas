@@ -41,7 +41,7 @@ export default function Footer() {
                 >
                   <Image
                     src="/images/footer-logo.jpg"
-                    alt="Root & Canvas arched landscape and roots icon"
+                    alt="Root and Canvas arched landscape and roots icon"
                     width={125}
                     height={125}
                     style={{
@@ -83,7 +83,21 @@ export default function Footer() {
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  IG
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
                 </motion.a>
                 <motion.a
                   href="https://www.pinterest.com/"
@@ -93,7 +107,15 @@ export default function Footer() {
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  P
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12.7 2C7.3 2 4 5.9 4 10.3c0 2.2 1.2 4.4 2.7 5.1.3.1.5 0 .5-.3.1-.4.3-1.3.4-1.6.1-.2 0-.4-.2-.6-.7-.8-1.1-2.1-1.1-3.4 0-3.3 2.5-6.3 6.6-6.3 3.6 0 6.2 2.4 6.2 5.9 0 3.7-2.1 6.4-4.8 6.4-1.5 0-2.6-1.2-2.3-2.7.4-1.8 1.2-3.8 1.2-5.1 0-1.2-.6-2.2-1.9-2.2-1.5 0-2.8 1.6-2.8 3.7 0 1.4.5 2.3.5 2.3s-1.8 7.6-2.1 8.9c-.4 1.7-.1 4.2 0 4.4.1.2.2.2.3.1.2-.2 2.2-2.7 2.5-3.8l1.3-4.9c.5.9 1.9 1.7 3.4 1.7 4.5 0 7.8-4.1 7.8-9.3C21.1 5.9 17.5 2 12.7 2z" />
+                  </svg>
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/company/root-and-canvas"
@@ -103,7 +125,21 @@ export default function Footer() {
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  in
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
                 </motion.a>
               </div>
 
@@ -118,7 +154,7 @@ export default function Footer() {
           </motion.div>
 
           <div className="legal">
-            <span>© 2026 Root & Canvas. All rights reserved.</span>
+            <span>© 2026 Root and Canvas. All rights reserved.</span>
             <span>Made with care, rooted in meaning.</span>
           </div>
         </div>

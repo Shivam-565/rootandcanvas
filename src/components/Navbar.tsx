@@ -107,6 +107,7 @@ export default function Navbar() {
 
           <div className="nav-actions">
             <motion.div
+              className="desktop-cta-wrapper"
               whileHover={{ y: -2, scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.2 }}

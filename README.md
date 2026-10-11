@@ -1,4 +1,4 @@
-# Root & Canvas — Next.js Application
+# Root and Canvas — Next.js Application
 
 A modern, high-performance **Next.js (App Router, TypeScript)** project converted from the original `Final landing page.html`.
 
@@ -12,7 +12,7 @@ A modern, high-performance **Next.js (App Router, TypeScript)** project converte
   - `Hero`: Editorial headline, narrative copy, call-to-actions, and blended artistic visual mask.
   - `ProblemSection`: "Somewhere along the way" problem cards and fluid responsive pullquotes.
   - `OfferingsSection`: The three core anchors (`Root`, `Canvas`, and `Aware`) with custom SVG iconography.
-  - `DifferenceSection`: Four benefits distinguishing the philosophy of Root & Canvas.
+  - `DifferenceSection`: Four benefits distinguishing the philosophy of Root and Canvas.
   - `FounderSection`: Letter from founder Muskan Priya with optimized portrait photography.
   - `NewsletterBand`: Interactive email subscription form with real-time feedback.
   - `Footer`: Detailed navigation columns, contact email, social media links, and accessible Privacy Policy modal.

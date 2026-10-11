@@ -24,7 +24,7 @@ export default function NewsletterBand() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      setMessage("Thank you for your interest! You’re connected with Root & Canvas.");
+      setMessage("Thank you for your interest! You’re connected with Root and Canvas.");
       setEmail("");
     }, 400);
   };

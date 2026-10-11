@@ -17,9 +17,9 @@ const prata = Prata({
 });
 
 export const metadata: Metadata = {
-  title: "Root & Canvas — Preserving what matters. Creating what’s next.",
+  title: "Root and Canvas — Preserving what matters. Creating what’s next.",
   description:
-    "Root & Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
+    "Root and Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
   keywords: [
     "Root and Canvas",
     "culinary heritage",
@@ -29,21 +29,21 @@ export const metadata: Metadata = {
     "thoughtful experiences",
   ],
   authors: [{ name: "Muskan Priya" }],
-  creator: "Root & Canvas",
+  creator: "Root and Canvas",
   openGraph: {
-    title: "Root & Canvas — Preserving what matters. Creating what’s next.",
+    title: "Root and Canvas — Preserving what matters. Creating what’s next.",
     description:
-      "Root & Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
+      "Root and Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
     url: "https://rootandcanvas.com",
-    siteName: "Root & Canvas",
+    siteName: "Root and Canvas",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Root & Canvas — Preserving what matters. Creating what’s next.",
+    title: "Root and Canvas — Preserving what matters. Creating what’s next.",
     description:
-      "Root & Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
+      "Root and Canvas brings together food, art and awareness through thoughtful products, resources and experiences.",
   },
   icons: {
     icon: [
@@ -66,7 +66,7 @@ export const viewport: Viewport = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Root & Canvas",
+  name: "Root and Canvas",
   url: "https://rootandcanvas.com",
   sameAs: [
     "https://www.instagram.com/rootandcanvas/",

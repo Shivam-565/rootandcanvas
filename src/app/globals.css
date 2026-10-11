@@ -541,7 +541,7 @@ section[id] {
   display: grid;
   grid-template-columns: 0.85fr 1fr;
   gap: 4rem;
-  align-items: end;
+  align-items: center;
   margin-bottom: 3rem;
 }
 
@@ -1555,25 +1555,38 @@ footer {
   }
 }
 
-@media (max-width: 620px) {
-  .nav-floating {
-    width: 94%;
-    margin-top: 0.75rem;
-    border-radius: 20px;
-    padding: 0.5rem 1.2rem;
+@media (max-width: 768px) {
+  .desktop-cta-wrapper,
+  .btn-explore {
+    display: none !important;
   }
   .navlinks {
-    display: none;
+    display: none !important;
   }
   .hamburger-btn {
-    display: flex;
+    display: flex !important;
   }
   .mobile-nav-drawer {
     display: block;
   }
+  .nav-actions {
+    gap: 0;
+  }
+  .nav-inner {
+    gap: 1rem;
+  }
   .wordmark-img {
-    width: 140px;
+    width: clamp(130px, 38vw, 160px);
     max-height: 42px;
+  }
+  .nav-docked {
+    padding: 0.5rem 0;
+  }
+  .nav-floating {
+    width: 94%;
+    margin-top: 0.6rem;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
   }
   
   .hero-section {
@@ -1581,41 +1594,55 @@ footer {
     padding: 1.5rem 0 2.5rem;
     display: flex;
     flex-direction: column;
-  }
-  
-  .hero-art-backdrop {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: 320px;
-    order: 2;
-  }
-  
-  .hero-art-img {
-    object-position: center;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, #000 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, #000 85%, transparent 100%);
-  }
-  
-  .hero-fade-overlay {
-    background: linear-gradient(
-      to bottom,
-      var(--cream) 0%,
-      rgba(247, 241, 229, 0.4) 30%,
-      transparent 60%
-    );
+    align-items: stretch;
   }
   
   .hero-content {
     order: 1;
-    padding: 1.5rem 0 1rem;
+    padding: 1rem 0 1.25rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-copy {
+    max-width: 100%;
   }
   
   .hero-copy h1 {
-    font-size: clamp(2.35rem, 9.5vw, 3.25rem);
+    font-size: clamp(2.15rem, 8.5vw, 2.9rem);
+    line-height: 1.15;
+    margin: 0.4rem 0 1rem;
   }
+
   .hero-copy p {
     font-size: 0.98rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .hero-art-backdrop {
+    order: 2;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 280px;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .hero-art-img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 85%, transparent 100%);
+  }
+  
+  .hero-fade-overlay {
+    display: none;
   }
 
   .section {

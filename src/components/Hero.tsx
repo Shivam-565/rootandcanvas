@@ -9,10 +9,9 @@ const easeCustom = [0.16, 1, 0.3, 1] as const;
 export default function Hero() {
   return (
     <section className="hero-section" id="home">
-      {/* Background artwork stretched across the entire section with gentle scale settle */}
+      {/* Background artwork with gentle scale settle */}
       <motion.div
         className="hero-art-backdrop"
-        style={{ position: "absolute", inset: 0 }}
         initial={{ scale: 1.05, opacity: 0.8 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: easeCustom }}

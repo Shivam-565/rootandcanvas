@@ -6,15 +6,15 @@ import PrivacyPolicyContent from "@/components/PrivacyPolicyContent";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Root & Canvas",
+  title: "Privacy Policy | Root and Canvas",
   description:
-    "Read the Privacy Policy of Root & Canvas. Learn what personal information we collect, why we collect it, how we use and protect it, and your rights under the Digital Personal Data Protection Act, 2023 and IT Act, 2000.",
+    "Read the Privacy Policy of Root and Canvas. Learn what personal information we collect, why we collect it, how we use and protect it, and your rights under the Digital Personal Data Protection Act, 2023 and IT Act, 2000.",
   openGraph: {
-    title: "Privacy Policy | Root & Canvas",
+    title: "Privacy Policy | Root and Canvas",
     description:
       "Effective date: 11 October 2026. Published in compliance with DPDP Act, 2023 and IT Act, 2000.",
     url: "https://rootandcanvas.com/privacy",
-    siteName: "Root & Canvas",
+    siteName: "Root and Canvas",
     type: "website",
   },
 };
@@ -40,10 +40,10 @@ export default function PrivacyPolicyPage() {
       {/* Top Header Bar */}
       <header className="policy-topbar">
         <div className="wrap policy-topbar-inner">
-          <Link href="/" className="policy-topbar-brand" aria-label="Back to Root & Canvas Home">
+          <Link href="/" className="policy-topbar-brand" aria-label="Back to Root and Canvas Home">
             <Image
               src="/images/logo-wordmark.png"
-              alt="Root & Canvas"
+              alt="Root and Canvas"
               width={180}
               height={48}
               priority
@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
               <span className="eyebrow">Legal & Compliance</span>
               <h1 className="policy-hero-title">Privacy Policy</h1>
               <p className="policy-hero-lead">
-                Root & Canvas values your trust and is committed to protecting your personal information.
+                Root and Canvas values your trust and is committed to protecting your personal information.
                 This policy outlines our transparent data practices under the Digital Personal Data
                 Protection Act, 2023 and the Information Technology Act, 2000.
               </p>

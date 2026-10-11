@@ -16,7 +16,7 @@ export default function PrivacyPolicyContent({ isModal = false }: PrivacyPolicyC
         </div>
         <div className="policy-meta-item">
           <span className="policy-meta-label">Entity</span>
-          <span className="policy-meta-val">Root & Canvas (Ranchi, Jharkhand, India)</span>
+          <span className="policy-meta-val">Root and Canvas (Ranchi, Jharkhand, India)</span>
         </div>
         <div className="policy-meta-item">
           <span className="policy-meta-label">Website</span>
@@ -35,7 +35,7 @@ export default function PrivacyPolicyContent({ isModal = false }: PrivacyPolicyC
           <h3>Introduction</h3>
         </div>
         <p>
-          Root & Canvas (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), based in Ranchi, Jharkhand,
+          Root and Canvas (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), based in Ranchi, Jharkhand,
           India, operates{" "}
           <a href="https://www.rootandcanvas.com" target="_blank" rel="noopener noreferrer">
             www.rootandcanvas.com
@@ -121,7 +121,7 @@ export default function PrivacyPolicyContent({ isModal = false }: PrivacyPolicyC
             <strong>Government or legal authorities</strong>, when required by law or a valid legal order.
           </li>
           <li>
-            <strong>A successor business</strong>, if Root & Canvas is merged with or sold to another business.
+            <strong>A successor business</strong>, if Root and Canvas is merged with or sold to another business.
           </li>
         </ul>
       </section>

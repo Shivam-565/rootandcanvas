@@ -19,7 +19,7 @@ export default function FounderSection() {
         >
           <Image
             src="/images/muskan-priya-founder.jpeg"
-            alt="Muskan Priya, Founder of Root & Canvas"
+            alt="Muskan Priya, Founder of Root and Canvas"
             width={600}
             height={700}
             priority
